@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <title>EXZACKLY7</title>
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+    <script>
+        var homeContent = `
+			<h1 class="header center base-color-text">Hi, I am Zachary Recolan</h1>
+            <img class="circle profile-picture" src="images/grad.jpg" alt="Graduation Picture" />
+            <div class="row center">
+                <h5 class="header col s12 light">Welcome to my website. I am a software engineer, Japanese enthusiast, and knowledge seeker. I am originally from Ewa Beach, Hawaii and am currently 5000 miles away for college</h5>
+            </div>
+            <div class="row center">
+                <a onclick='loadContent("about-me")' class="btn-large waves-effect waves-light base-color">About Me</a> &nbsp;&nbsp;&nbsp;
+                <a onclick='loadContent("projects")' class="btn-large waves-effect waves-light base-color">Projects</a>
+            </div>
+		`;
+
+        var aboutMeContent = `
+		<h1 class="header center base-color-text">About Me</h1>
+
+		  <ul class="pagination center">
+    <li class="waves-effect base-color"><a>Jump To</a></li>
+    <li class="waves-effect"><a href="#skills">Skills</a></li>
+    <li class="waves-effect"><a href="#accomplishments">Accomplishments</a></li>
+    <li class="waves-effect"><a href="#interests">Interests</a></li>
+    <li class="waves-effect"><a href="#experience">Experience</a></li>
+  </ul>
+            <div class="row center">
+                <h5 class="header col s12 light">
+                    I was born in Hilo, Hawaii and was raised in Ewa Beach, Hawaii. Some of my interests growing up included baseball, computers, math, and the sciences. This early interest in computers lead me to pursue programming throughout middle and high school, which slowly evolved into my major in college. I graduated valedictorian from James Campbell High School and received a 4-year, merit based, full tuition, room, and board scholarship for Marist College
+                </h5>
+                <h5 class="header col s12 light">
+                    I graduated with a bachelor of science, <i>summa cum laude</i>, in computer science from Marist college, a small private liberal arts college in Poughkeepsie, New York. I received minors in psychology, math, information systems, and information technology, with a final GPA of 3.972. I also worked multiple jobs and internships (<a href="#experience">see detailed experience</a>)
+                </h5>
+                <h5 class="header col s12 light">
+                    I remained highly involved on campus as a part of Marist Ambassadors, Asian Alliance, Computer Society, and Math Club. I volunteered with the Food Recovery Network and Habitat for Humanity and played intramural dodgeball and volleyball. I have a passion for software development, for which I strive to push the limits of the technology used everyday by people around the world
+                </h5>
+            </div>
+            <a style="display:block; position:relative; top:-50px; visibility:hidden;" name="skills"></a>
+            <h1 class="header center base-color-text">Skills</h1>
+            <div class="row center">
+                <h5 class="header col s12 light">
+                    Check out my <a href="https://docs.google.com/document/d/1GvBwjt-J38wZGDzGLMNfzoeDeXhfy18KVJsaZ7SskD4/edit?usp=sharing"><i class="material-icons"><img src="images/resume.png" style="height:30px;width:25px;" alt="Resume" /></i> resume</a> and <a href="https://www.linkedin.com/in/zachary-recolan"><i class="material-icons"><img src="images/linkedin.png" style="height:25px;width:25px;" alt="LinkedIn" /></i> LinkedIn</a> for a more detailed list
+                </h5>
+                <h5 class="header col s12 light">
+                    Some languages that I have worked with include Python, C++, Objective-C, Swift, Java, Haskell, Lua, REXX, PHP, HTML, CSS, JavaScript, TypeScript, and jQuery. I also have experience with SQL, Git, and Vim
+                </h5>
+                <h5 class="header col s12 light">
+                    I am familiar with agile and model-view-controller methodologies, am a quick learner and problem solver, and am a strong critical thinker
+                </h5>
+            </div>
+            <a style="display:block; position:relative; top:-50px; visibility:hidden;" name="accomplishments"></a>
+			<h1 class="header center base-color-text hide-on-small-only">Accomplishments</h1>
+            <h3 class="header center base-color-text hide-on-med-and-up">Accomplishments</h3>
+            <div class="row center">
+                <ul class="collection left-text">
+                    <li class="collection-item">
+                        <h5 class="header light">Marist College, merit based 4-year full tuition, room, and board scholarship</h5>
+                    </li>
+                    <li class="collection-item">
+                        <h5 class="header light">U.S. Embassy Tokyo, TOMODACHI Initiative Internship Scholarship </h5>
+                    </li>
+                    <li class="collection-item">
+                        <h5 class="header light">Marist College, Dean’s List, all semesters</h5>
+                    </li>
+					<li class="collection-item">
+                        <h5 class="header light">Alpha Chi National College Honor Society</h5>
+                    </li>
+					<li class="collection-item">
+                        <h5 class="header light">2018 Marist College Intern of the Year for Computer Science</h5>
+                    </li>
+					<li class="collection-item">
+                        <h5 class="header light">For The Record 2018, Marist Circle</h5>
+                    </li>
+					<li class="collection-item">
+                        <h5 class="header light">2018 Emerging Leaders Program Award</h5>
+                    </li>
+                    <li class="collection-item">
+                        <h5 class="header light">1st place submission for HackMarist hackathon on 10/28/16–10/30/16</h5>
+                    </li>
+                    <li class="collection-item">
+                        <h5 class="header light">1st place submission for The Hartford hackathon on 4/8/16–4/10/16</h5>
+                    </li>
+                    <li class="collection-item">
+                        <h5 class="header light">1st place submission for Marist College hackathon on 12/5/15–12/6/15</h5>
+                    </li>
+                    <li class="collection-item">
+                        <h5 class="header light">James Campbell High School, Valedictorian, Class of 2014</h5>
+                    </li>
+                </ul>
+            </div>
+			<a style="display:block; position:relative; top:-50px; visibility:hidden;" name="interests"></a>
+            <h1 class="header center base-color-text">Interests</h1>
+            <ul class="collapsible" data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header active">
+                        <h4 class="header base-color-text text-lighten-2">Technology</h4>
+                    </div>
+                    <div class="collapsible-body">
+                        <h5 class="header light">
+                            I have a passion for technology and software development. I started programming in 2007 and have experience working with a <a href="#skills">variety of languages</a>. Check out some of my <a onclick='loadContent("projects")'>projects</a> and <a href="#accomplishments"> accomplishments</a>
+                        </h5>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <h4 class="header base-color-text text-lighten-2">Japanese</h4>
+                    </div>
+                    <div class="collapsible-body">
+                        <h5 class="header light">
+                            I began studying Japanese as a freshman in high school. Living in Hawaii, I grew interested in the language, and from a friendly competition, spawned a complete obsession. I studied abroad in Tokyo in the spring of 2017 at Temple University Japan and currently study Japanese for around 2-3 hours per day
+                        </h5>
+                    </div>
+                </li>
+				<li>
+                    <div class="collapsible-header active">
+                        <h4 class="header base-color-text text-lighten-2">Finance</h4>
+                    </div>
+                    <div class="collapsible-body">
+                        <h5 class="header light">
+							I am deeply curious with regards to finance. I try to read often and learn everything that I can about the topic
+                        </h5>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <h4 class="header base-color-text text-lighten-2">Baseball</h4>
+                    </div>
+                    <div class="collapsible-body">
+                        <h5 class="header light">
+                            I played baseball my entire life up through high school. Despite taking a break during college to explore other interests, baseball remains an integral part of my life. Saber Team Together Pride
+                        </h5>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <h4 class="header base-color-text text-lighten-2">Hawaii</h4>
+                    </div>
+                    <div class="collapsible-body">
+                        <h5 class="header light">
+                            I was born and raised in Hawaii. I am originally from Hilo, Hawaii but moved to Ewa Beach, Hawaii when I was 9 months old. I carry the relaxed, local vibe with me everywhere that I go
+                        </h5>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <h4 class="header base-color-text text-lighten-2">Travel</h4>
+                    </div>
+                    <div class="collapsible-body">
+                        <h5 class="header light">
+                            I am extremely interested in traveling. I have only been to Canada, Japan, China, and most states in the US thus far but am excited to continue exploring the world
+                        </h5>
+                    </div>
+                </li>
+            </ul>
+            <a style="display:block; position:relative; top:-50px; visibility:hidden;" name="experience"></a>
+            <h1 class="header center base-color-text">Experience</h1>
+            <ul class="collapsible" data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header active">
+                        <h4 class="header base-color-text text-lighten-2">Eyesaac System Technologies, Inc</h4>
+                    </div>
+                    <div class="collapsible-body">
+                        <h5 class="header light">
+                            As a software engineer intern, I designed and developed iOS applications for internal company usage, maintained private internal network for secure communication and testing, and bridged the culture and ideas between English and Japanese coworkers
+                        </h5>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <h4 class="header base-color-text text-lighten-2">Topical BioMedics TopTrack</h4>
+                    </div>
+                    <div class="collapsible-body">
+                        <h5 class="header light">
+                            As the lead iOS software engineer, I maintained TopTrack, an iOS application used to track and manage pain; expanded data analytics to improve customer relations and retention; and drove development of new innovative features and technologies
+                        </h5>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <h4 class="header base-color-text text-lighten-2">IBM</h4>
+                    </div>
+                    <div class="collapsible-body">
+                        <h5 class="header light">
+                            As a software engineer intern, I managed the conversion of files in a development repository database, automated regression test variations for TSO/E and RACF on z/OS using REXX, and collaborated with other workers to efficiently create regression test variations and ensure product proformance
+                        </h5>
+                    </div>
+                </li>
+				
+				<li>
+                    <div class="collapsible-header">
+                        <h4 class="header base-color-text text-lighten-2">Marist College Programming Lab</h4>
+                    </div>
+                    <div class="collapsible-body">
+                        <h5 class="header light">
+                            As a programming lab tutor, I provided assistance with various programming courses; clarified programming concepts, principles, and best practices; and aided with debugging of student assignments	
+                        </h5>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <h4 class="header base-color-text text-lighten-2">Marist College Web Services</h4>
+                    </div>
+                    <div class="collapsible-body">
+                        <h5 class="header light">
+                            As a student web developer, I utilized Help Desk Processor to manage customer requests, collaborated with other student web developers to complete customer requests and additional side projects, and worked with customers to create quality content for the Marist College website
+                        </h5>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <h4 class="header base-color-text text-lighten-2">Marist College Summer Pre-College</h4>
+                    </div>
+                    <div class="collapsible-body">
+                        <h5 class="header light">
+                            As a teaching assistant, I presented lessons on using Construct 2, served as a mentor for pre-college students, and provided lab time aid for students with Construct 2
+                        </h5>
+                    </div>
+                </li>
+            </ul>
+            <div class="row center">
+                <a onclick='loadContent("home")' class="btn-large waves-effect waves-light base-color">Home</a> &nbsp;&nbsp;&nbsp;
+                <a onclick='loadContent("projects")' class="btn-large waves-effect waves-light base-color">Projects</a>
+            </div>
+		`;
+
+        var projectsContent = `
+		<h1 class="header center base-color-text">Projects</h1>
+            <div class="row center">
+                <h5 class="header col s12 light">
+                    Software development is my passion. Check out more of my projects on <a style="display: inline-block" href="https://github.com/exzackly">
+            <i class="material-icons"><img src="images/github.png" style="height:25px;width:25px;" alt="GitHub" /></i>
+            https://github.com/exzackly
+            </a>
+                </h5>
+            </div>
+            <ul class="collapsible" data-collapsible="accordion">
+				<li>
+                    <div class="collapsible-header active">
+                        <h4 class="header base-color-text text-lighten-2">EXZLER</h4>
+                    </div>
+                    <div class="collapsible-body">
+                        <h5 class="header light">
+                            view source on <a href="https://github.com/exzackly/EXZLER"><i class="material-icons"><img src="images/github.png" style="height:25px;width:25px;" alt="GitHub" /></i> GitHub</a>
+                            <br><br> Compiler for 6502 architecture written in Swift. Term project for CMPT 432N-111 Compilers. 
+                            <br><br> Written in Swift
+                        </h5>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header active">
+                        <h4 class="header base-color-text text-lighten-2">EXZOS</h4>
+                    </div>
+                    <div class="collapsible-body">
+                        <h5 class="header light">
+                            view source on <a href="https://github.com/exzackly/EXZOS"><i class="material-icons"><img src="images/github.png" style="height:25px;width:25px;" alt="GitHub" /></i> GitHub</a>
+                            <br><br> Browser-based Operating System in TypeScript. Term project for CMPT 424N-111 Operating Systems. 
+							<br><br><a href="/EXZOS">Try it out!</a>
+                            <br><br> Written in HTML, CSS, JavaScript, and TypeScript
+                        </h5>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header active">
+                        <h4 class="header base-color-text text-lighten-2">Imago-Imaginis</h4>
+                    </div>
+                    <div class="collapsible-body">
+                        <h5 class="header light">
+                            view source on <a href="https://github.com/exzackly/imago-imaginis"><i class="material-icons"><img src="images/github.png" style="height:25px;width:25px;" alt="GitHub" /></i> GitHub</a>
+                            <br><br> Artistic Stylizer Platform. Capstone project by Brendon Boldt, Leonardo Keefe, Antonio DelVecchio, Zachary Recolan, and Kai Wong
+							<br><br><a href="https://imagino.reev.us/home">Try it out!</a>
+                            <br><br> Written in HTML, CSS, JavaScript, and TypeScript
+                        </h5>
+                    </div>
+                </li>
+				<li>
+                    <div class="collapsible-header active">
+                        <h4 class="header base-color-text text-lighten-2">conText</h4>
+                    </div>
+                    <div class="collapsible-body">
+                        <h5 class="header light">
+                            view source on <a href="https://github.com/exzackly/conText"><i class="material-icons"><img src="images/github.png" style="height:25px;width:25px;" alt="GitHub" /></i> GitHub</a>
+                            <br><br> First place submission for HackMarist hackathon at Marist College on 10/28/16-10/30/16. Uses English language modelling to detect when someone else is trying to send messages as you. If the neural network thinks the writing style isn't like you, it will report that.
+                            <br><br> Written in Python
+                        </h5>
+                    </div>
+                </li>
+				<li>
+                    <div class="collapsible-header">
+                        <h4 class="header base-color-text text-lighten-2">LSG (Loading Screen Game)</h4>
+                    </div>
+                    <div class="collapsible-body">
+                        <h5 class="header light">
+                            view source on <a href="https://github.com/exzackly/LSG"><i class="material-icons"><img src="images/github.png" style="height:25px;width:25px;" alt="GitHub" /></i> GitHub</a>
+                            <br><br> Winning submission for Marist College Computer Society 7-hour hackathon on 12/5/15-12/6/15
+							<br><br><a href="/LSG">Try it out!</a>
+                            <br><br> Written in HTML, CSS, and JavaScript
+                        </h5>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header active">
+                        <h4 class="header base-color-text text-lighten-2">PEH (Process Enhancement Hackathon)</h4>
+                    </div>
+                    <div class="collapsible-body">
+                        <h5 class="header light">
+                            view source on <a href="https://github.com/exzackly/PEH"><i class="material-icons"><img src="images/github.png" style="height:25px;width:25px;" alt="GitHub" /></i> GitHub</a>
+                            <br><br> Winning submission for The Hartford hackathon at Marist College on 4/8/16-4/10/16
+                            <br><br> Written in HTML, CSS, JavaScript, PHP, Python, Ruby, and Swift
+                        </h5>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <h4 class="header base-color-text text-lighten-2">Beats1Tracker</h4>
+                    </div>
+                    <div class="collapsible-body">
+                        <h5 class="header light">
+                            view source on <a href="https://github.com/exzackly/Beats1Tracker"><i class="material-icons"><img src="images/github.png" style="height:25px;width:25px;" alt="GitHub" /></i> GitHub</a>
+                            <br><br> Automatically determines currently playing songs on Beats 1 and logs to <a href="Beats1Tracker/"><span class="hide-on-small-only">zacharyrecolan.com/</span>Beats1Tracker</a>
+                            <br><br> Written in Python, HTML, CSS, JavaScript, jQuery, and PHP
+                        </h5>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <h4 class="header base-color-text text-lighten-2">YouTubeScraper</h4>
+                    </div>
+                    <div class="collapsible-body">
+                        <h5 class="header light">
+                            view source on <a href="https://github.com/exzackly/YouTubeScraper"><i class="material-icons"><img src="images/github.png" style="height:25px;width:25px;" alt="GitHub" /></i> GitHub</a>
+                            <br><br> Automated YouTube downloader
+                            <br><br> Written in Python
+                        </h5>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <h4 class="header base-color-text text-lighten-2">SudokuSolver</h4>
+                    </div>
+                    <div class="collapsible-body">
+                        <h5 class="header light">
+                            view source on <a href="https://github.com/exzackly/SudokuSolver"><i class="material-icons"><img src="images/github.png" style="height:25px;width:25px;" alt="GitHub" /></i> GitHub</a>
+                            <br><br> Bruteforce Sudoku Solver
+                            <br><br> Written in Java
+                        </h5>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <h4 class="header base-color-text text-lighten-2">smsBomber</h4>
+                    </div>
+                    <div class="collapsible-body">
+                        <h5 class="header light">
+                            view source on <a href="https://github.com/exzackly/smsBomber"><i class="material-icons"><img src="images/github.png" style="height:25px;width:25px;" alt="GitHub" /></i> GitHub</a>
+                            <br><br> SMS bomber
+                            <br><br> Written in Python
+                        </h5>
+                    </div>
+                </li>
+            </ul>
+            <div class="row center">
+                <a onclick='loadContent("home")' class="btn-large waves-effect waves-light base-color">Home</a> &nbsp;&nbsp;&nbsp;
+                <a onclick='loadContent("about-me")' class="btn-large waves-effect waves-light base-color">About Me</a>
+            </div>
+			`;
+
+        var pageContent = {
+            "home": homeContent,
+            "about-me": aboutMeContent,
+            "projects": projectsContent
+        };
+
+        var loadContent = function(id) {
+            document.getElementById("container").innerHTML = pageContent[id]; // Load corresponding page content
+            document.body.scrollTop = document.documentElement.scrollTop = 0; // Scroll to top of page
+            prepareAnchors(); // Prepare animated scroll to anchor
+            $("#home,#about-me,#projects").removeClass("active"); // Reset active navbar item
+            $("#" + id).addClass("active"); // Set new active navbar item
+            $(document).ready(function() { // Prepare any collapsible elements
+                $('.collapsible').collapsible();
+            });
+            $('.button-collapse').sideNav('hide'); // Close side navbar
+        };
+
+        var prepareAnchors = function() {
+            $(function() {
+                $('a[href*="#"]:not([href="#"])').click(function() {
+                    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                        var target = $(this.hash);
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                        if (target.length) {
+                            $('html, body').animate({
+                                scrollTop: target.offset().top
+                            }, 1000);
+                            $('.button-collapse').sideNav('hide');
+                            return false;
+                        }
+                    }
+                });
+            });
+        }
+    </script>
+</head>
+
+<!-- Load "home" content when page loads -->
+
+<body onload='loadContent("home")'>
+
+    <!-- navbar -->
+    <div class="navbar-fixed">
+        <nav class="base-color lighten-1" role="navigation">
+            <div class="nav-wrapper container">
+                <a id="logo-container" href="/" class="brand-logo">EXZACKLY7</a>
+                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li id="home"><a onclick='loadContent("home")'>Home</a></li>
+                    <li id="about-me"><a onclick='loadContent("about-me")'>About Me</a></li>
+                    <li id="projects"><a onclick='loadContent("projects")'>Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- sidenav needs to be outside of .navbar-fixed -->
+    <ul id="nav-mobile" class="side-nav">
+        <li id="home"><a onclick='loadContent("home")'>Home</a></li>
+        <li id="about-me"><a onclick='loadContent("about-me")'>About Me</a></li>
+        <li id="projects"><a onclick='loadContent("projects")'>Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <!-- end navbar -->
+
+    <!-- main content -->
+    <div class="section no-pad-bot" id="index-banner">
+        <div id="container" class="container">
+            <!-- load content to here -->
+        </div>
+    </div>
+    <!-- end main content -->
+
+    <!-- footer -->
+    <footer class="page-footer base-color">
+        <div class="container">
+            <div class="row">
+                <div class="col s5">
+                    <a name="contact"></a>
+                    <h5 class="white-text">About me</h5>
+                    <p class="grey-text text-lighten-4">I am a software engineer, Japanese enthusiast, and knowledge seeker. <a class="white-text" onclick='loadContent("about-me")'>Click here for a detailed about me</a></p>
+                </div>
+                <div class="col s7">
+                    <h5 class="white-text">Contact</h5>
+                    <ul>
+                        <li><a class="white-text" href="https://docs.google.com/document/d/1GvBwjt-J38wZGDzGLMNfzoeDeXhfy18KVJsaZ7SskD4/edit?usp=sharing">
+            <i class="material-icons left"><img src="images/resume.png" style="height:30px;width:25px;" alt="Resume" /></i>
+            <br class="hide-on-med-and-up"><br class="hide-on-med-and-up">
+            Resume
+            </a>
+                        </li>
+                        <br>
+                        <li><a class="white-text" href="mailto:Zachary.Recolan1@marist.edu">
+            <i class="material-icons left"><img src="images/email.png" style="height:20px;width:25px;" alt="Email" /></i>
+            <br class="hide-on-med-and-up"><br class="hide-on-med-and-up">
+            Zachary.Recolan1@marist.edu
+            </a>
+                        </li>
+                        <br>
+                        <li><a class="white-text" href="https://github.com/exzackly">
+            <i class="material-icons left"><img src="images/github.png" style="height:25px;width:25px;" alt="GitHub" /></i>
+            <br class="hide-on-med-and-up"><br class="hide-on-med-and-up">
+            https://github.com/exzackly
+            </a>
+                        </li>
+                        <br>
+                        <li><a class="white-text" href="https://www.linkedin.com/in/zachary-recolan">
+            <i class="material-icons left"><img src="images/linkedin.png" style="height:25px;width:25px;" alt="LinkedIn" /></i>
+            <br class="hide-on-med-and-up"><br class="hide-on-med-and-up">
+            https://linkedin.com/in/zachary-recolan
+            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright center">
+            <div class="container">
+                Copyright (c) 2018 <a class="base-color-text text-lighten-3" href="/">EXZACKLY</a>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+</body>
+
+</html>

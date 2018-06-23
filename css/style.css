@@ -1,0 +1,108 @@
+.base-color, .base-color:focus, .base-color:hover {
+	background-color: #FFCC66;
+}
+
+.base-color.lighten-1 {
+	background-color: #ffd480;
+}
+
+.base-color.lighten-2 {
+	background-color: #ffdd99;
+}
+
+.base-color.lighten-3 {
+	background-color: #ffe6b3;
+}
+
+.base-color.lighten-4 {
+	background-color: #ffeecc;
+}
+
+.base-color.lighten-5 {
+	background-color: #fff7e6;
+}
+
+.base-color.darken-1 {
+	background-color: #ffc34d;
+}
+
+.base-color.darken-2 {
+	background-color: #ffbb33;
+}
+
+.base-color.darken-3 {
+	background-color: #ffb31a;
+}
+
+.base-color.darken-4 {
+	background-color: #ffaa00;
+}
+
+.base-color.darken-5 {
+	background-color: #e69900;
+}
+
+.base-color-text {
+	color: #FFCC66;
+}
+
+.base-color-text.text-lighten-1 {
+	color: #ffd480;
+}
+
+.base-color-text.text-lighten-2 {
+	color: #ffdd99;
+}
+
+.base-color-text.text-lighten-3 {
+	color: #ffe6b3;
+}
+
+.base-color-text.text-lighten-4 {
+	color: #ffeecc;
+}
+
+.base-color-text.text-lighten-5 {
+	color: #fff7e6;
+}
+
+.base-color-text.text-darken-1 {
+	color: #ffc34d;
+}
+
+.base-color-text.text-darken-2 {
+	color: #ffbb33;
+}
+
+.base-color-text.text-darken-3 {
+	color: #ffb31a;
+}
+
+.base-color-text.text-darken-4 {
+	color: #ffaa00;
+}
+
+.base-color-text.text-darken-5 {
+	color: #e69900;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+.profile-picture {
+	max-width: 30%;
+	min-width: 200px;
+	margin: auto;
+	display: block; 
+}
+
+a.anchor {
+	display: block;
+	position: relative;
+	top: -50px;
+}
